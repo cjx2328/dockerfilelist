@@ -14,10 +14,7 @@ RUN yum -y install wget
 
 RUN yum -y install git 
 
-#RUN yum install -y vixie-cron
-
 RUN yum -y install zip unzip
-
 
 WORKDIR /usr/src
 
@@ -31,10 +28,7 @@ RUN ./configure --enable-optimizations
 
 RUN make altinstall
 
-
-
 RUN python2.7 -m ensurepip --default-pip
-
 
 RUN git clone -b master https://github.com/flyzy2005/ss-fly
 
@@ -43,13 +37,9 @@ WORKDIR ss-fly
 #1024 这个是对外端口 需要和下面开启端口一起修复
 RUN bash ./ss-fly.sh -i flyzy2005.com 1024
 
-
 WORKDIR /app
 
-
 COPY . /app
-
-
 
 #开启1024端口
 EXPOSE 1024
