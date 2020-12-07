@@ -4,7 +4,19 @@ FROM centos:centos7
 #维护人的信息
 MAINTAINER The CentOS Project <cjx2328@126.com>
 
-#RUN yum -y update
+WORKDIR etc/yum.repos.d/
+
+RM -f CentOS-Base.repo CentOS-AppStream.repo CentOS-PowerTools.repo CentOS-centosplus.repo CentOS-Extras.repo              #删除原文件
+
+RUN curl -o CentOS-Base.repo https://raw.githubusercontent.com/hackyoMa/docker-centos/8/CentOS-Base.repo  #下载新的源文件
+
+RUN yum clear all   #清空下缓存的内容
+RUN yum makecache   #更新元数据缓存
+
+RUN echo "nameserver 8.8.8.8" >> /etc/resolv.conf 
+RUN echo "nameserver 223.5.5.5" >> /etc/resolv.conf 
+
+RUN yum -y update
 
 RUN yum -y install gcc openssl-devel bzip2-devel
 
