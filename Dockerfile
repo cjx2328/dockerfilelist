@@ -4,10 +4,11 @@ FROM centos:centos7
 #维护人的信息
 MAINTAINER The CentOS Project <cjx2328@126.com>
 
-
-RUN echo "nameserver 8.8.8.8" >> /etc/resolv.conf 
-RUN echo "nameserver 223.5.5.5" >> /etc/resolv.conf 
-
+RUN rm  /etc/resolv.conf  \
+  && touch /etc/resolv.conf \
+  &&  echo "nameserver 8.8.8.8" >> /etc/resolv.conf  \
+  && echo "nameserver 223.5.5.5" >> /etc/resolv.conf 
+ 
 RUN yum -y update
 
 RUN yum -y install gcc openssl-devel bzip2-devel
