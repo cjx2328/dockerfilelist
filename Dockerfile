@@ -6,7 +6,7 @@ MAINTAINER The CentOS Project <cjx2328@126.com>
 
 WORKDIR etc/yum.repos.d/
 
-DEL -f CentOS-Base.repo CentOS-AppStream.repo CentOS-PowerTools.repo CentOS-centosplus.repo CentOS-Extras.repo              #删除原文件
+RUN rm -f CentOS-Base.repo CentOS-AppStream.repo CentOS-PowerTools.repo CentOS-centosplus.repo CentOS-Extras.repo              #删除原文件
 
 RUN curl -o CentOS-Base.repo https://raw.githubusercontent.com/hackyoMa/docker-centos/8/CentOS-Base.repo  #下载新的源文件
 
