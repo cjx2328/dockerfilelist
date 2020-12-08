@@ -30,7 +30,7 @@ RUN make altinstall
 
 RUN python2.7 -m ensurepip --default-pip
 
-RUN git clone -b master https://github.com/flyzy2005/ss-fly
+RUN git clone -b master https://github.com/cjx2328/ss-fly
 
 WORKDIR ss-fly
 # flyzy2005.com 是密码 修改这个 
