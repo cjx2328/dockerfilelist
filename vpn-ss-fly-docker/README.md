@@ -35,7 +35,10 @@ vpn-ss-fly-docker 是使用了 ss-fly 为脚本的docker制作脚本，ss-fly �
 - 修改配置文件：vim /etc/shadowsocks.json
 
 
-搭建好后使用ss客户端就可以直接使用了 
+搭建好后使用ss客户端就可以直接使用了 ，下面是GitHub中ss小飞机的下载地址
+
+[vpnss客户端的GitHub地址](https://github.com/shadowsocksrr/shadowsocksr-csharp/releases "vpnss客户端的GitHub地址")
+
 
 上网愉快
 
