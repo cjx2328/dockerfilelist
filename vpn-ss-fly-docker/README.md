@@ -18,7 +18,7 @@ vpn-ss-fly-docker 是使用了 ss-fly 为脚本的docker制作脚本，ss-fly �
 
 `docker build -t vpnssfly/centos:v1 .`
 
-`docker run -td -p 1024:1024  vpnssfly/centos:v1 /bin/sh -c '/etc/init.d/ss-fly start'`
+`docker run -ti -p 1024:1024  vpnssfly/centos:v1 /bin/sh -c '/etc/init.d/ss-fly start'`
 
 
 ##### DOCKERFILE文件说明
