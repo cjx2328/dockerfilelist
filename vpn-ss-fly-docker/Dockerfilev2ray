@@ -12,7 +12,7 @@ RUN yum -y install gcc automake autoconf libtool make
 
 RUN yum -y install wget
 
-RUN yum -y install git 
+RUN yum -y install git
 
 RUN yum -y install zip unzip
 
@@ -33,9 +33,9 @@ RUN python2.7 -m ensurepip --default-pip
 RUN git clone -b master https://github.com/cjx2328/ss-fly
 
 WORKDIR ss-fly
-# flyzy2005.com 是密码 修改这个 
+# flyzy2005.com 是密码 修改这个
 #1024 这个是对外端口 需要和下面开启端口一起修复
-RUN bash ./ss-fly.sh -i flyzy2005.com 1024
+RUN bash ./v2ray.sh -i flyzy2005.com 1024
 
 WORKDIR /app
 
@@ -44,9 +44,9 @@ COPY . /app
 #开启1024端口
 EXPOSE 1024
 
- 
 
 
- 
+
+
 
 
