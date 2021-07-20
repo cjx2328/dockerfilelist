@@ -35,7 +35,7 @@ RUN git clone -b master https://github.com/cjx2328/ss-fly
 WORKDIR ss-fly
 # flyzy2005.com 是密码 修改这个
 #1024 这个是对外端口 需要和下面开启端口一起修复
-RUN bash ./v2ray.sh -i flyzy2005.com 1024
+RUN bash ./v2ray.sh
 
 WORKDIR /app
 
